@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<package>
+  <metadata>
+    <id>AppGatewayHostRewrite</id>
+    <title>Application Gateway Host Rewrite</title>
+    <version>0.0.1</version>
+    <authors>Chris Woodard</authors>
+    <licenseUrl>https://github.com/avisra/AppGatewayHostRewrite/blob/master/LICENSE</licenseUrl>
+    <projectUrl>https://github.com/avisra/AppGatewayHostRewrite</projectUrl>
+    <iconUrl></iconUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>Replaces the Host header with the X-Original-Host after Application Gateway has routed to the correct App Service</description>
+    <tags>x-original-host host header rewrite azure application-gateway app-gateway reverse-proxy</tags>
+  </metadata>
+  <files>
+    <file src="applicationHost.xdt" target="Content" />
+  </files>
+</package>
