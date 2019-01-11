@@ -3,7 +3,7 @@
   <location path="%XDT_SITENAME%" xdt:Transform="InsertIfMissing" xdt:Locator="Match(path)">
     <system.webServer xdt:Transform="InsertIfMissing">
       <rewrite xdt:Transform="InsertIfMissing">
-        <allowedServerVariables xdt:Transform="Replace">
+        <allowedServerVariables xdt:Transform="InsertIfMissing">
           <add name="HTTP_X_ORIGINAL_HOST" xdt:Transform="InsertIfMissing" />
           <add name="HTTP_HOST" xdt:Transform="InsertIfMissing" />
         </allowedServerVariables>        
