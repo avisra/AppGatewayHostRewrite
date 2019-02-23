@@ -3,7 +3,7 @@
   <metadata>
     <id>AppGatewayHostRewrite</id>
     <title>Application Gateway Host Rewrite</title>
-    <version>0.0.2</version>
+    <version>0.0.3</version>
     <authors>Chris Woodard</authors>
     <licenseUrl>https://github.com/avisra/AppGatewayHostRewrite/blob/master/LICENSE</licenseUrl>
     <projectUrl>https://github.com/avisra/AppGatewayHostRewrite</projectUrl>
