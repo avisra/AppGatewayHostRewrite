@@ -1,12 +1,24 @@
 <?xml version="1.0"?>
-<configuration xmlns:xdt="http://schemas.microsoft.com/XML-Document-Transform">
+<configuration 
+  xmlns:xdt="http://schemas.microsoft.com/XML-Document-Transform">
   <location path="%XDT_SITENAME%" xdt:Transform="InsertIfMissing" xdt:Locator="Match(path)">
     <system.webServer xdt:Transform="InsertIfMissing">
       <rewrite xdt:Transform="InsertIfMissing">
         <allowedServerVariables xdt:Transform="InsertIfMissing">
           <add name="HTTP_X_ORIGINAL_HOST" xdt:Transform="InsertIfMissing" />
           <add name="HTTP_HOST" xdt:Transform="InsertIfMissing" />
-        </allowedServerVariables>        
+        </allowedServerVariables>
+        <rules xdt:Transform="InsertIfMissing">
+          <rule name="Set HOST header based on X-Original-Host header" xdt:Transform="InsertIfMissing" xdt:Locator="Match(name)">
+            <match url="(.*)"></match>
+            <conditions logicalGrouping="MatchAll" trackAllCaptures="false">
+              <add input="{HTTP_X_ORIGINAL_HOST}" pattern="^$" negate="true" />
+            </conditions>
+            <serverVariables>
+              <set name="HTTP_HOST" value="{HTTP_X_ORIGINAL_HOST}"></set>
+            </serverVariables>
+          </rule>
+        </rules>
       </rewrite>
     </system.webServer>
   </location>
